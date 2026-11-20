@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>The World in One Day — Thursday 19 November 2026</title>
+<style>
+@font-face{font-family:'Day Serif';src:url('assets/fonts/LiberationSerif-Regular.ttf') format('truetype');font-weight:400;}
+@font-face{font-family:'Day Serif';src:url('assets/fonts/LiberationSerif-Bold.ttf') format('truetype');font-weight:700;}
+@font-face{font-family:'Day Serif';src:url('assets/fonts/LiberationSerif-Italic.ttf') format('truetype');font-weight:400;font-style:italic;}
+@font-face{font-family:'Day Sans';src:url('assets/fonts/LiberationSans-Regular.ttf') format('truetype');font-weight:400;}
+@font-face{font-family:'Day Sans';src:url('assets/fonts/LiberationSans-Bold.ttf') format('truetype');font-weight:700;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{width:1024px;height:1024px;background:#f7f1e3;}
+body{font-family:'Day Sans',sans-serif;color:#1a1a1a;}
+.sheet{width:1024px;height:1024px;padding:16px;display:flex;flex-direction:column;gap:6px;background:#f7f1e3;overflow:hidden;}
+.row{width:992px;overflow:hidden;}
+/* ---------- Masthead 122 ---------- */
+.top{height:116px;padding:5px 16px 5px 16px;display:flex;flex-direction:column;background:#f7f1e3;}
+.top .kicker{height:12px;line-height:12px;font-size:11px;font-weight:700;letter-spacing:3px;text-align:center;color:#a31d1d;overflow:hidden;}
+.top .date{height:62px;line-height:62px;font-family:'Day Serif',serif;font-weight:700;font-size:56px;text-align:center;color:#1a1a1a;overflow:hidden;}
+.top .deck{height:19px;line-height:19px;font-family:'Day Serif',serif;font-style:italic;font-size:15px;text-align:center;color:#a31d1d;overflow:hidden;}
+.top .tagline{height:12px;line-height:12px;font-size:11px;letter-spacing:2px;text-align:center;color:#3d4657;overflow:hidden;}
+/* ---------- Region bar 30 ---------- */
+.regions{height:30px;display:flex;gap:4px;}
+.regions .seg{flex:1;height:30px;display:flex;flex-direction:column;justify-content:center;align-items:center;color:#f7f1e3;overflow:hidden;}
+.regions .seg .nm{height:10px;line-height:10px;font-size:9px;font-weight:700;letter-spacing:1px;overflow:hidden;}
+.regions .seg .ct{height:16px;line-height:16px;font-size:14px;font-weight:700;overflow:hidden;}
+.regions .eu{background:#1f3a93;} .regions .am{background:#2e7d32;} .regions .as{background:#b3261e;}
+.regions .me{background:#8a5200;} .regions .af{background:#5b2a86;} .regions .oc{background:#0e6b6b;}
+.regions .wo{background:#14213d;}
+/* ---------- Numbers strip 46 ---------- */
+.figures{height:46px;display:flex;gap:8px;background:#111111;padding:4px 8px;}
+.figures .cell{flex:1;height:38px;display:flex;flex-direction:column;justify-content:center;align-items:center;overflow:hidden;}
+.figures .num{height:29px;line-height:29px;font-size:26px;font-weight:700;color:#e8b93c;overflow:hidden;white-space:nowrap;}
+.figures .cap{height:9px;line-height:9px;font-size:8px;letter-spacing:1px;color:#f7f1e3;overflow:hidden;white-space:nowrap;}
+/* ---------- Hours strip 30 ---------- */
+.hours{height:28px;display:flex;align-items:center;gap:10px;border-top:1px solid #1a1a1a;border-bottom:1px solid #1a1a1a;padding:0 4px;overflow:hidden;}
+.hours .lbl{font-size:10px;font-weight:700;letter-spacing:1px;color:#a31d1d;white-space:nowrap;}
+.hours .ev{font-size:9px;color:#1a1a1a;white-space:nowrap;overflow:hidden;}
+.hours .ev b{color:#a31d1d;}
+/* ---------- Leads 200 (3 cols) ---------- */
+.leads{height:200px;display:flex;gap:8px;}
+.lead{width:325px;height:200px;padding:7px 9px;background:#fffdf6;border:1px solid #1a1a1a;display:flex;flex-direction:column;gap:2px;overflow:hidden;}
+.lead.mid{width:326px;}
+.lead .pic{width:307px;height:92px;overflow:hidden;}
+.lead .cat{height:11px;line-height:11px;font-size:10px;font-weight:700;letter-spacing:1px;color:#a31d1d;overflow:hidden;}
+.lead .head{height:50px;line-height:25px;font-family:'Day Serif',serif;font-weight:700;font-size:22px;overflow:hidden;}
+.lead .deck{height:26px;line-height:13px;font-size:11px;color:#3d4657;overflow:hidden;}
+/* ---------- Cards 230 (6 cols x 2 rows) ---------- */
+.cards{height:226px;display:grid;grid-template-columns:160px 158px 158px 158px 158px 160px;grid-template-rows:109px 109px;gap:8px;}
+.card{background:#fffdf6;border:1px solid #1a1a1a;padding:5px 7px;display:flex;flex-direction:column;gap:1px;overflow:hidden;}
+.card .pic{height:38px;overflow:hidden;}
+.card .cat{height:11px;line-height:11px;font-size:9px;font-weight:700;letter-spacing:1px;color:#0e6b6b;overflow:hidden;}
+.card .head{height:32px;line-height:16px;font-family:'Day Serif',serif;font-weight:700;font-size:14.5px;overflow:hidden;}
+.card .fig{height:12px;line-height:12px;font-size:11px;font-weight:700;color:#1a1a1a;overflow:hidden;}
+/* ---------- Map band 150 ---------- */
+.mapband{height:150px;padding:0;}
+.map-title{height:12px;line-height:12px;font-size:11px;font-weight:700;letter-spacing:1px;color:#1a1a1a;overflow:hidden;}
+.map-row{height:136px;margin-top:2px;display:flex;gap:12px;}
+.map-frame{width:560px;height:136px;background:#dde7e8;border:1px solid #1a1a1a;overflow:hidden;}
+.panel{width:420px;height:136px;display:flex;flex-direction:column;overflow:hidden;}
+.panel .p-head{height:11px;line-height:11px;font-size:10px;font-weight:700;letter-spacing:1px;color:#1a1a1a;overflow:hidden;}
+.panel .legend{height:46px;display:flex;gap:8px;}
+.panel .legend .col{width:206px;height:46px;display:flex;flex-direction:column;}
+.panel .legend .li{height:11.5px;line-height:11.5px;font-size:9px;color:#1a1a1a;overflow:hidden;white-space:nowrap;}
+.panel .legend .li b{color:#a31d1d;}
+.panel .inset-row{height:72px;margin-top:3px;display:flex;gap:8px;}
+.panel .inset{width:150px;height:72px;border:1px solid #1a1a1a;background:#dde7e8;overflow:hidden;}
+.panel .inset-note{width:246px;height:72px;display:flex;flex-direction:column;gap:2px;}
+.panel .inset-note .t{height:11px;line-height:11px;font-size:9px;font-weight:700;letter-spacing:1px;color:#1a1a1a;overflow:hidden;}
+.panel .inset-note .d{line-height:11px;font-size:9px;color:#3d4657;}
+/* ---------- Index 108 ---------- */
+.index{height:107px;padding:0;}
+.idx-title{height:12px;line-height:12px;font-size:11px;font-weight:700;letter-spacing:1px;color:#1a1a1a;overflow:hidden;}
+.idx-grid{height:93px;margin-top:1px;display:flex;gap:12px;}
+.idx-col{width:239px;height:93px;display:flex;flex-direction:column;}
+.idx-e{height:13.2px;line-height:13.2px;font-size:10.5px;color:#1a1a1a;overflow:hidden;white-space:nowrap;}
+.idx-e b{color:#a31d1d;}
+/* ---------- Footer 40 ---------- */
+.footer{height:40px;padding:3px 16px;background:#111111;color:#f7f1e3;display:flex;flex-direction:column;}
+.ft-check{height:23px;line-height:11.5px;font-size:9.5px;font-weight:700;letter-spacing:0.5px;overflow:hidden;}
+.ft-src{height:10px;line-height:10px;font-size:8px;letter-spacing:0.5px;color:#d8d2c2;overflow:hidden;}
+#audit{display:none;}
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <!-- MASTHEAD -->
+  <div class="row top" data-band="masthead">
+    <div class="kicker" data-audit="mh-kicker">THE WORLD IN ONE DAY</div>
+    <div class="date" data-audit="mh-date">Thursday 19 November 2026</div>
+    <div class="deck" data-audit="mh-deck">Three leaders meet in Shenzhen &middot; Myanmar guilty of genocide, 9&ndash;6 &middot; The biggest IPO ever debuts</div>
+    <div class="tagline" data-audit="mh-tag">42 STORIES &middot; SEVEN REGIONS &middot; ONE DAY, ONE PAGE</div>
+  </div>
+
+  <!-- REGION BAR -->
+  <div class="row regions" data-band="regions">
+    <div class="seg eu"><div class="nm" data-audit="rg-eu-n">EUROPE</div><div class="ct" data-audit="rg-eu-c">9</div></div>
+    <div class="seg am"><div class="nm" data-audit="rg-am-n">AMERICAS</div><div class="ct" data-audit="rg-am-c">14</div></div>
+    <div class="seg as"><div class="nm" data-audit="rg-as-n">ASIA</div><div class="ct" data-audit="rg-as-c">6</div></div>
+    <div class="seg me"><div class="nm" data-audit="rg-me-n">MIDDLE EAST</div><div class="ct" data-audit="rg-me-c">6</div></div>
+    <div class="seg af"><div class="nm" data-audit="rg-af-n">AFRICA</div><div class="ct" data-audit="rg-af-c">2</div></div>
+    <div class="seg oc"><div class="nm" data-audit="rg-oc-n">OCEANIA</div><div class="ct" data-audit="rg-oc-c">2</div></div>
+    <div class="seg wo"><div class="nm" data-audit="rg-wo-n">WORLD</div><div class="ct" data-audit="rg-wo-c">3</div></div>
+  </div>
+
+  <!-- NUMBERS STRIP -->
+  <div class="row figures" data-band="figures">
+    <div class="cell"><div class="num" data-audit="f1-num">$81.3BN</div><div class="cap" data-audit="f1-cap">ANTHROPIC RAISED</div></div>
+    <div class="cell"><div class="num" data-audit="f2-num">730,000</div><div class="cap" data-audit="f2-cap">ROHINGYA FLED 2017</div></div>
+    <div class="cell"><div class="num" data-audit="f3-num">9&ndash;6</div><div class="cap" data-audit="f3-cap">ICJ GENOCIDE VOTE</div></div>
+    <div class="cell"><div class="num" data-audit="f4-num">&euro;45BN</div><div class="cap" data-audit="f4-cap">EU LOAN FOR UKRAINE</div></div>
+    <div class="cell"><div class="num" data-audit="f5-num">162,5%</div><div class="cap" data-audit="f5-cap">SCOTCH DUTY</div></div>
+    <div class="cell"><div class="num" data-audit="f6-num">5.400</div><div class="cap" data-audit="f6-cap">US MEASLES CASES</div></div>
+  </div>
+
+  <!-- HOURS STRIP -->
+  <div class="row hours" data-band="hours">
+    <span class="lbl" data-audit="hr-lbl">THE DAY BY HOURS</span>
+    <span class="ev" data-audit="hr-ev"><b>00:00</b> AUCKLAND &middot; GTA VI OUT &mdash; <b>05:30</b> INDIA &middot; AKVAN BULLETIN &mdash; <b>08:40</b> SEOUL &middot; SUNEUNG &mdash; <b>09:30</b> NEW YORK &middot; ANT DEBUT &mdash; <b>10:00</b> THE HAGUE &middot; ICJ RULING &mdash; <b>14:30</b> SHENZHEN &middot; TRILATERAL</span>
+  </div>
+
+  <!-- LEADS x3 -->
+  <div class="row leads" data-band="leads">
+    <div class="lead">
+      <div class="pic"><svg width="307" height="92" viewBox="0 0 307 92"><rect width="307" height="92" fill="#2c2140"/><rect y="0" width="307" height="30" fill="#5b2a86"/><rect y="30" width="307" height="22" fill="#a03a7a"/><rect y="52" width="307" height="20" fill="#e2603a"/><rect y="72" width="307" height="20" fill="#f2a541"/><circle cx="252" cy="26" r="13" fill="#ffe27a"/><rect x="12" y="52" width="18" height="40" fill="#1a0f2e"/><rect x="36" y="42" width="14" height="50" fill="#1a0f2e"/><rect x="56" y="58" width="20" height="34" fill="#1a0f2e"/><rect x="82" y="46" width="12" height="46" fill="#1a0f2e"/><rect x="100" y="60" width="16" height="32" fill="#1a0f2e"/><rect x="200" y="56" width="16" height="36" fill="#1a0f2e"/><rect x="222" y="48" width="12" height="44" fill="#1a0f2e"/><rect x="270" y="60" width="18" height="32" fill="#1a0f2e"/><rect x="140" y="18" width="26" height="16" fill="#b22234"/><rect x="140" y="18" width="11" height="8" fill="#3c3b6e"/><rect x="140" y="18" width="26" height="3" fill="#fff"/><rect x="140" y="24" width="26" height="3" fill="#fff"/><rect x="140" y="30" width="26" height="3" fill="#fff"/><rect x="176" y="18" width="26" height="16" fill="#de2910"/><circle cx="181" cy="24" r="3" fill="#ffde00"/><circle cx="193" cy="22" r="1" fill="#ffde00"/><circle cx="197" cy="28" r="1" fill="#ffde00"/><circle cx="187" cy="30" r="1" fill="#ffde00"/><rect x="212" y="18" width="26" height="16" fill="#fff"/><rect x="212" y="18" width="26" height="5" fill="#fff"/><rect x="212" y="23" width="26" height="6" fill="#0039a6"/><rect x="212" y="29" width="26" height="5" fill="#d52b1e"/><rect x="152" y="18" width="2" height="52" fill="#f7f1e3"/><rect x="188" y="18" width="2" height="52" fill="#f7f1e3"/><rect x="224" y="18" width="2" height="52" fill="#f7f1e3"/><ellipse cx="189" cy="84" rx="52" ry="6" fill="#7a4a21"/><rect x="160" y="76" width="10" height="8" fill="#f7f1e3"/><rect x="184" y="76" width="10" height="8" fill="#f7f1e3"/><rect x="208" y="76" width="10" height="8" fill="#f7f1e3"/></svg></div>
+      <div class="cat" data-audit="l1-cat">1 &middot; SHENZHEN &middot; SUMMIT</div>
+      <div class="head" data-audit="l1-head">Trilateral ends in 4-point pact</div>
+      <div class="deck" data-audit="l1-deck">First US&ndash;China&ndash;Russia summit ends in a four-point peace declaration; no breakthrough.</div>
+    </div>
+    <div class="lead mid">
+      <div class="pic"><svg width="307" height="92" viewBox="0 0 307 92"><rect width="307" height="92" fill="#9db8c4"/><rect y="62" width="307" height="30" fill="#5d8146"/><rect x="58" y="22" width="191" height="44" fill="#f7f1e3" stroke="#8a7a5a" stroke-width="2"/><polygon points="58,22 153,6 249,22" fill="#e8dcc0" stroke="#8a7a5a" stroke-width="2"/><rect x="72" y="34" width="9" height="32" fill="#8a7a5a"/><rect x="96" y="34" width="9" height="32" fill="#8a7a5a"/><rect x="120" y="34" width="9" height="32" fill="#8a7a5a"/><rect x="144" y="34" width="9" height="32" fill="#8a7a5a"/><rect x="168" y="34" width="9" height="32" fill="#8a7a5a"/><rect x="192" y="34" width="9" height="32" fill="#8a7a5a"/><rect x="216" y="34" width="9" height="32" fill="#8a7a5a"/><rect x="138" y="44" width="30" height="22" fill="#5b4a2a"/><circle cx="153" cy="40" r="4" fill="#e8b93c"/><rect x="266" y="18" width="4" height="48" fill="#8a6d1f"/><rect x="246" y="18" width="44" height="3" fill="#8a6d1f"/><path d="M250 21 L244 36 L256 36 Z" fill="none" stroke="#8a6d1f" stroke-width="2"/><path d="M286 21 L280 36 L292 36 Z" fill="none" stroke="#8a6d1f" stroke-width="2"/><circle cx="268" cy="16" r="3" fill="#8a6d1f"/><rect x="252" y="66" width="32" height="5" fill="#8a6d1f"/><circle cx="30" cy="30" r="10" fill="#ffe27a"/><circle cx="30" cy="30" r="14" fill="none" stroke="#e8b93c" stroke-width="2"/></svg></div>
+      <div class="cat" data-audit="l2-cat">2 &middot; THE HAGUE &middot; JUSTICE</div>
+      <div class="head" data-audit="l2-head">ICJ: Myanmar committed genocide</div>
+      <div class="deck" data-audit="l2-deck">The World Court finds Myanmar guilty of genocide by 9&ndash;6 &mdash; the first state ever held responsible.</div>
+    </div>
+    <div class="lead">
+      <div class="pic"><svg width="307" height="92" viewBox="0 0 307 92"><rect width="307" height="92" fill="#1a0f2e"/><rect y="0" width="307" height="26" fill="#5b2a86"/><rect y="26" width="307" height="22" fill="#a03a7a"/><rect y="48" width="307" height="20" fill="#e2603a"/><rect y="68" width="307" height="24" fill="#f2a541"/><circle cx="153" cy="52" r="16" fill="#ffe27a"/><rect x="16" y="56" width="16" height="36" fill="#1a0f2e"/><rect x="38" y="48" width="12" height="44" fill="#1a0f2e"/><rect x="56" y="62" width="18" height="30" fill="#1a0f2e"/><rect x="240" y="54" width="14" height="38" fill="#1a0f2e"/><rect x="260" y="62" width="18" height="30" fill="#1a0f2e"/><rect x="282" y="58" width="12" height="34" fill="#1a0f2e"/><path d="M100 92 L104 58 L108 92" stroke="#1a0f2e" stroke-width="5" fill="none"/><path d="M104 62 Q94 50 84 54 M104 62 Q114 48 124 54" stroke="#1a0f2e" stroke-width="4" fill="none"/><path d="M212 92 L216 60 L220 92" stroke="#1a0f2e" stroke-width="5" fill="none"/><path d="M216 64 Q206 52 196 56 M216 64 Q226 50 236 56" stroke="#1a0f2e" stroke-width="4" fill="none"/><text x="153" y="46" font-family="Day Serif, serif" font-weight="700" font-size="30" fill="#f7f1e3" text-anchor="middle">VI</text><rect x="128" y="78" width="50" height="9" fill="#0a0a18"/><text x="153" y="85" font-family="Day Sans, sans-serif" font-weight="700" font-size="7" fill="#e8b93c" text-anchor="middle">VICE CITY</text></svg></div>
+      <div class="cat" data-audit="l3-cat">3 &middot; WORLDWIDE &middot; GAMES</div>
+      <div class="head" data-audit="l3-head">Grand Theft Auto VI goes global</div>
+      <div class="deck" data-audit="l3-deck">Rockstar&rsquo;s sequel unlocks at midnight worldwide; critics hail it, Metacritic 99.</div>
+    </div>
+  </div>
+
+  <!-- CARDS 12 (6 cols x 2 rows) -->
+  <div class="row cards" data-band="cards">
+    <div class="card">
+      <div class="pic"><svg width="142" height="38" viewBox="0 0 142 38"><rect width="142" height="38" fill="#0a2e2e"/><rect x="18" y="24" width="14" height="14" fill="#e8b93c"/><rect x="40" y="18" width="14" height="20" fill="#e8b93c"/><rect x="62" y="12" width="14" height="26" fill="#e8b93c"/><rect x="84" y="6" width="14" height="32" fill="#e8b93c"/><polyline points="18,20 47,14 69,8 91,4 108,8" stroke="#f7f1e3" stroke-width="2" fill="none"/><circle cx="108" cy="8" r="3" fill="#f7f1e3"/><text x="124" y="26" font-family="Day Serif, serif" font-weight="700" font-size="22" fill="#f7f1e3">A</text></svg></div>
+      <div class="cat" data-audit="c4-cat">NASDAQ &middot; AI IPO</div>
+      <div class="head" data-audit="c4-head">Anthropic&rsquo;s $1.5T Nasdaq debut</div>
+      <div class="fig" data-audit="c4-fig">$83 &middot; 980M SHARES</div>
+    </div>
+    <div class="card">
+      <div class="pic"><svg width="142" height="38" viewBox="0 0 142 38"><rect width="142" height="38" fill="#050914"/><circle cx="14" cy="8" r="1" fill="#fff"/><circle cx="42" cy="14" r="1" fill="#fff"/><circle cx="96" cy="6" r="1" fill="#fff"/><circle cx="126" cy="12" r="1" fill="#fff"/><circle cx="118" cy="26" r="7" fill="#2e6da4"/><circle cx="115" cy="23" r="2" fill="#7da05c"/><path d="M16 30 L52 30 L52 20 L84 20" stroke="#e8b93c" stroke-width="2" fill="none"/><rect x="48" y="16" width="7" height="7" fill="#e8b93c"/><circle cx="24" cy="20" r="6" fill="none" stroke="#d8d2c2" stroke-width="1.5"/><circle cx="24" cy="20" r="2" fill="#d8d2c2"/><path d="M84 20 L104 14 L118 22" stroke="#d8d2c2" stroke-width="1" stroke-dasharray="3 3" fill="none"/></svg></div>
+      <div class="cat" data-audit="c5-cat">DEEP SPACE &middot; NASA / JPL</div>
+      <div class="head" data-audit="c5-head">Voyager 1 reaches one light-day</div>
+      <div class="fig" data-audit="c5-fig">25.9BN KM</div>
+    </div>
+    <div class="card">
+      <div class="pic"><svg width="142" height="38" viewBox="0 0 142 38"><rect width="142" height="38" fill="#1f3a93"/><g fill="#e8b93c"><circle cx="71" cy="5" r="2"/><circle cx="81" cy="8" r="2"/><circle cx="87" cy="16" r="2"/><circle cx="87" cy="24" r="2"/><circle cx="81" cy="31" r="2"/><circle cx="71" cy="34" r="2"/><circle cx="61" cy="31" r="2"/><circle cx="55" cy="24" r="2"/><circle cx="55" cy="16" r="2"/><circle cx="61" cy="8" r="2"/></g><text x="71" y="26" font-family="Day Serif, serif" font-weight="700" font-size="19" fill="#f7f1e3" text-anchor="middle">&euro;</text></svg></div>
+      <div class="cat" data-audit="c6-cat">BRUSSELS &middot; EU</div>
+      <div class="head" data-audit="c6-head">EU proposes &euro;45bn loan for Ukraine</div>
+      <div class="fig" data-audit="c6-fig">&euro;45BN &middot; 2027</div>
+    </div>
+    <div class="card">
+      <div class="pic"><svg width="142" height="38" viewBox="0 0 142 38"><rect width="142" height="38" fill="#1a0f0a"/><path d="M26 34 L34 14 L42 34 Z" fill="#e2603a"/><path d="M56 34 L68 6 L80 34 Z" fill="#f2a541"/><path d="M96 34 L104 16 L112 34 Z" fill="#e2603a"/><circle cx="68" cy="29" r="3" fill="#ffe27a"/></svg></div>
+      <div class="cat" data-audit="c7-cat">QESHM &middot; GULF</div>
+      <div class="head" data-audit="c7-head">US and Iran trade fire again</div>
+      <div class="fig" data-audit="c7-fig">QESHM + KUWAIT</div>
+    </div>
+    <div class="card">
+      <div class="pic"><svg width="142" height="38" viewBox="0 0 142 38"><rect width="142" height="38" fill="#6b6b3a"/><rect x="16" y="16" width="52" height="12" fill="#2e2e1a"/><rect x="28" y="8" width="22" height="8" fill="#2e2e1a"/><rect x="36" y="3" width="5" height="6" fill="#2e2e1a"/><circle cx="24" cy="32" r="3" fill="#1a1a0e"/><circle cx="60" cy="32" r="3" fill="#1a1a0e"/><rect x="84" y="16" width="36" height="4" fill="#e8b93c"/></svg></div>
+      <div class="cat" data-audit="c8-cat">CENTRAL GAZA</div>
+      <div class="head" data-audit="c8-head">Israeli tanks cross Yellow Line</div>
+      <div class="fig" data-audit="c8-fig">FIRST SINCE OCT</div>
+    </div>
+    <div class="card">
+      <div class="pic"><svg width="142" height="38" viewBox="0 0 142 38"><rect width="142" height="38" fill="#f7f1e3"/><rect x="16" y="6" width="94" height="5" fill="#1a1a1a"/><rect x="24" y="11" width="5" height="17" fill="#1a1a1a"/><rect x="46" y="11" width="5" height="17" fill="#1a1a1a"/><rect x="68" y="11" width="5" height="17" fill="#1a1a1a"/><rect x="90" y="11" width="5" height="17" fill="#1a1a1a"/><rect x="16" y="29" width="94" height="3" fill="#1a1a1a"/><text x="122" y="24" font-family="Day Sans, sans-serif" font-weight="700" font-size="15" fill="#0e6b6b">%</text></svg></div>
+      <div class="cat" data-audit="c9-cat">WASHINGTON &middot; FED</div>
+      <div class="head" data-audit="c9-head">Fed minutes point to more rises</div>
+      <div class="fig" data-audit="c9-fig">3.75&ndash;4.00%</div>
+    </div>
+    <div class="card">
+      <div class="pic"><svg width="142" height="38" viewBox="0 0 142 38"><rect width="142" height="38" fill="#0e6b6b"/><rect x="56" y="8" width="30" height="22" fill="#0a2e2e" stroke="#e8b93c" stroke-width="2"/><rect x="64" y="15" width="14" height="8" fill="#e8b93c"/><rect x="58" y="13" width="6" height="3" fill="#e8b93c"/><rect x="58" y="22" width="6" height="3" fill="#e8b93c"/><rect x="78" y="13" width="6" height="3" fill="#e8b93c"/><rect x="78" y="22" width="6" height="3" fill="#e8b93c"/><rect x="64" y="4" width="3" height="4" fill="#e8b93c"/><rect x="75" y="4" width="3" height="4" fill="#e8b93c"/><rect x="64" y="30" width="3" height="4" fill="#e8b93c"/><rect x="75" y="30" width="3" height="4" fill="#e8b93c"/></svg></div>
+      <div class="cat" data-audit="c10-cat">SANTA CLARA &middot; NVIDIA</div>
+      <div class="head" data-audit="c10-head">Nvidia halts licensed Hopper chips</div>
+      <div class="fig" data-audit="c10-fig">$2.4BN SALES</div>
+    </div>
+    <div class="card">
+      <div class="pic"><svg width="142" height="38" viewBox="0 0 142 38"><rect width="142" height="38" fill="#14213d"/><rect x="26" y="8" width="32" height="18" fill="#b22234"/><rect x="26" y="8" width="13" height="10" fill="#3c3b6e"/><rect x="26" y="8" width="32" height="3" fill="#fff"/><rect x="26" y="14" width="32" height="3" fill="#fff"/><rect x="26" y="20" width="32" height="3" fill="#fff"/><rect x="72" y="8" width="32" height="18" fill="#fff"/><rect x="72" y="8" width="32" height="6" fill="#fff"/><rect x="72" y="14" width="32" height="6" fill="#0039a6"/><rect x="72" y="20" width="32" height="6" fill="#d52b1e"/><rect x="41" y="8" width="2" height="26" fill="#d8d2c2"/><rect x="87" y="8" width="2" height="26" fill="#d8d2c2"/></svg></div>
+      <div class="cat" data-audit="c11-cat">SHENZHEN &middot; APEC</div>
+      <div class="head" data-audit="c11-head">Trump, Putin meet in Shenzhen</div>
+      <div class="fig" data-audit="c11-fig">SINCE ALASKA 2025</div>
+    </div>
+    <div class="card">
+      <div class="pic"><svg width="142" height="38" viewBox="0 0 142 38"><rect width="142" height="38" fill="#1a1a1a"/><path d="M26 12 L71 3 L116 12 Z" fill="#e8b93c"/><rect x="32" y="14" width="5" height="16" fill="#e8b93c"/><rect x="50" y="14" width="5" height="16" fill="#e8b93c"/><rect x="68" y="14" width="5" height="16" fill="#e8b93c"/><rect x="86" y="14" width="5" height="16" fill="#e8b93c"/><rect x="104" y="14" width="5" height="16" fill="#e8b93c"/><rect x="24" y="30" width="94" height="3" fill="#e8b93c"/><text x="126" y="26" font-family="Day Sans, sans-serif" font-weight="700" font-size="16" fill="#f7f1e3">$</text></svg></div>
+      <div class="cat" data-audit="c12-cat">FRANKFURT &middot; BANK</div>
+      <div class="head" data-audit="c12-head">Deutsche flagged $582M in deals</div>
+      <div class="fig" data-audit="c12-fig">$582M</div>
+    </div>
+    <div class="card">
+      <div class="pic"><svg width="142" height="38" viewBox="0 0 142 38"><rect width="142" height="38" fill="#f7f1e3"/><g fill="#b3261e"><circle cx="38" cy="12" r="5"/><circle cx="58" cy="8" r="4"/><circle cx="76" cy="14" r="5"/><circle cx="96" cy="10" r="4"/><circle cx="48" cy="25" r="4"/><circle cx="68" cy="23" r="6"/><circle cx="88" cy="27" r="4"/><circle cx="58" cy="33" r="3"/><circle cx="82" cy="33" r="3"/></g></svg></div>
+      <div class="cat" data-audit="c13-cat">WASHINGTON &middot; HEALTH</div>
+      <div class="head" data-audit="c13-head">US loses measles elimination status</div>
+      <div class="fig" data-audit="c13-fig">5,400 CASES</div>
+    </div>
+    <div class="card">
+      <div class="pic"><svg width="142" height="38" viewBox="0 0 142 38"><rect width="142" height="38" fill="#0e6b6b"/><g fill="none" stroke="#f7f1e3" stroke-width="2"><path d="M71 19 m0 -14 a14 14 0 1 1 -14 14"/><path d="M71 19 m0 -9 a9 9 0 1 1 -9 9"/><path d="M71 19 m0 -4 a4 4 0 1 1 -4 4"/></g><circle cx="71" cy="19" r="2" fill="#e8b93c"/></svg></div>
+      <div class="cat" data-audit="c14-cat">INDIA &middot; CYCLONE</div>
+      <div class="head" data-audit="c14-head">Cyclone Akvan nears India&rsquo;s coast</div>
+      <div class="fig" data-audit="c14-fig">90&ndash;100 KM/H</div>
+    </div>
+    <div class="card">
+      <div class="pic"><svg width="142" height="38" viewBox="0 0 142 38"><rect width="142" height="38" fill="#1f3a93"/><rect x="46" y="14" width="44" height="19" fill="#f7f1e3" stroke="#14213d" stroke-width="2"/><rect x="60" y="5" width="17" height="11" fill="#f7f1e3" stroke="#14213d" stroke-width="2"/><path d="M54 24 L62 30 L82 17" stroke="#b3261e" stroke-width="3" fill="none"/></svg></div>
+      <div class="cat" data-audit="c15-cat">ALASKA &middot; SENATE</div>
+      <div class="head" data-audit="c15-head">Peltola wins Alaska, 56&ndash;44 Senate</div>
+      <div class="fig" data-audit="c15-fig">56&ndash;44</div>
+    </div>
+  </div>
+
+  <!-- MAP + PANEL -->
+  <div class="row mapband" data-band="mapband">
+    <div class="map-title" data-audit="map-title">WHERE IT HAPPENED &mdash; EIGHT PLACES ON THURSDAY&rsquo;S MAP</div>
+    <div class="map-row">
+      <div class="map-frame"><svg id="worldmap" width="560" height="136" viewBox="0 0 560 136"></svg></div>
+      <div class="panel">
+        <div class="p-head" data-audit="panel-head">ON THE MAP &mdash; 8 PLACES</div>
+        <div class="legend">
+          <div class="col">
+            <div class="li" data-audit="lg1"><b>1</b> Shenzhen &mdash; trilateral</div>
+            <div class="li" data-audit="lg2"><b>2</b> The Hague &mdash; ICJ verdict</div>
+            <div class="li" data-audit="lg3"><b>3</b> Gaza &mdash; Yellow Line</div>
+            <div class="li" data-audit="lg4"><b>4</b> Hormuz &mdash; claim: 3 tankers</div>
+          </div>
+          <div class="col">
+            <div class="li" data-audit="lg5"><b>5</b> Kuwait &mdash; US&ndash;Iran fire</div>
+            <div class="li" data-audit="lg6"><b>6</b> Derna &mdash; 4M+ pills seized</div>
+            <div class="li" data-audit="lg7"><b>7</b> E. India &mdash; Cyclone Akvan</div>
+            <div class="li" data-audit="lg8"><b>8</b> Caracas &mdash; Hegseth visit</div>
+          </div>
+        </div>
+        <div class="inset-row">
+          <div class="inset"><svg id="insetmap" width="150" height="72" viewBox="0 0 150 72"></svg></div>
+          <div class="inset-note">
+            <div class="t" data-audit="inset-title">INSET &mdash; GULF &amp; E. MEDITERRANEAN</div>
+            <div class="d" data-audit="inset-d1">Inset shows pins 3&ndash;6 in true relative place; the main map marks them with one &#9670;.</div>
+            <div class="d" data-audit="inset-d2">DRAWN MAP &middot; COASTS SIMPLIFIED, NOT TO SCALE</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INDEX 27 -->
+  <div class="row index" data-band="index">
+    <div class="idx-title" data-audit="idx-title">ALSO ON THURSDAY 19 NOVEMBER &mdash; 27 MORE STORIES</div>
+    <div class="idx-grid">
+      <div class="idx-col">
+        <div class="idx-e" data-audit="i16"><b>16</b> Van Gogh sells for record $190.4M</div>
+        <div class="idx-e" data-audit="i17"><b>17</b> France confirms troops in Ukraine</div>
+        <div class="idx-e" data-audit="i18"><b>18</b> Hormuz claim: 3 tankers hit &mdash; unverified</div>
+        <div class="idx-e" data-audit="i19"><b>19</b> Houthis hold Bab el-Mandeb strait</div>
+        <div class="idx-e" data-audit="i20"><b>20</b> Hegseth&rsquo;s first Venezuela visit</div>
+        <div class="idx-e" data-audit="i21"><b>21</b> Iraq jails six French for life</div>
+        <div class="idx-e" data-audit="i22"><b>22</b> Jeffries nominated, 251&ndash;11</div>
+      </div>
+      <div class="idx-col">
+        <div class="idx-e" data-audit="i23"><b>23</b> US tightens green cards: 90 days</div>
+        <div class="idx-e" data-audit="i24"><b>24</b> NSA classified network down</div>
+        <div class="idx-e" data-audit="i25"><b>25</b> Scotch duty now 162.5%</div>
+        <div class="idx-e" data-audit="i26"><b>26</b> Islam largest faith by 2035</div>
+        <div class="idx-e" data-audit="i27"><b>27</b> Haaland 3&ndash;2: Norway advance</div>
+        <div class="idx-e" data-audit="i28"><b>28</b> Libya seizes 4M+ pills</div>
+        <div class="idx-e" data-audit="i29"><b>29</b> Bayesian report: wind flaw found</div>
+      </div>
+      <div class="idx-col">
+        <div class="idx-e" data-audit="i30"><b>30</b> Prince Harry: &lsquo;100%&rsquo; would rejoin</div>
+        <div class="idx-e" data-audit="i31"><b>31</b> Australia sanctions settlers</div>
+        <div class="idx-e" data-audit="i32"><b>32</b> Duckett 133 as England win ODI</div>
+        <div class="idx-e" data-audit="i33"><b>33</b> Senators warn of AI cyber threats</div>
+        <div class="idx-e" data-audit="i34"><b>34</b> Nvidia interim CEO promises pay rise</div>
+        <div class="idx-e" data-audit="i35"><b>35</b> Somalia accuses UAE over bases</div>
+        <div class="idx-e" data-audit="i36"><b>36</b> Saudi: &lsquo;danger passed&rsquo; in south</div>
+      </div>
+      <div class="idx-col">
+        <div class="idx-e" data-audit="i37"><b>37</b> LPG tanker sunk off Bulgaria</div>
+        <div class="idx-e" data-audit="i38"><b>38</b> India, Japan review defence ties</div>
+        <div class="idx-e" data-audit="i39"><b>39</b> Canada recalibrates China ties</div>
+        <div class="idx-e" data-audit="i40"><b>40</b> Suneung: 551,864 sit Korea&rsquo;s exam</div>
+        <div class="idx-e" data-audit="i41"><b>41</b> Floods shut Florida schools again</div>
+        <div class="idx-e" data-audit="i42"><b>42</b> COP31 draft drops fossil fuels</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="row footer" data-band="footer">
+    <div class="ft-check" data-audit="ft-check">DATE CHECK &mdash; THURSDAY 19 NOVEMBER 2026 &middot; TRILATERAL: 4-POINT PACT, NO BREAKTHROUGH &middot; ICJ: MYANMAR GUILTY 9&ndash;6<br>CLAIM: HORMUZ &mdash; IRGC CLAIM OF 3 TANKERS DISABLED, NOT INDEPENDENTLY CONFIRMED &middot; COP31 DRAFT: NO FOSSIL FUELS &middot; GTA VI SCORE PER 18 NOV</div>
+    <div class="ft-src" data-audit="ft-src">SOURCES: REUTERS &middot; AP &middot; AFP &middot; BBC &middot; CNN &middot; FINANCIAL TIMES &middot; ESPN &middot; NASA/JPL &middot; ICJ &middot; CDC/PAHO &middot; PEW &middot; IMD &middot; FED &middot; UN NEWS &middot; UNHCR &middot; ABS &middot; KICE &middot; NWS &middot; UNFCCC &middot; METACRITIC</div>
+  </div>
+
+</div>
+<pre id="audit"></pre>
+<script>
+/* Coarse world outline, equirectangular: lon -180..180 -> x 0..560,
+   lat +60..-60 -> y 0..136. Integer vertices, drawn schematic. */
+const LANDMASS = {
+NA:[[-168,66],[-140,60],[-125,49],[-120,34],[-110,24],[-97,16],[-83,9],[-77,4],[-72,11],[-60,8],[-55,6],[-62,12],[-70,20],[-76,32],[-74,40],[-66,45],[-60,47],[-65,52],[-60,55],[-68,58],[-78,62],[-92,66],[-110,68],[-140,70],[-155,71],[-168,66]],
+SA:[[-80,9],[-75,-2],[-81,-8],[-74,-18],[-70,-30],[-68,-42],[-66,-50],[-70,-54],[-62,-44],[-57,-38],[-48,-28],[-40,-15],[-35,-8],[-44,-2],[-52,0],[-58,6],[-70,12],[-80,9]],
+EU:[[-10,36],[-9,43],[-2,48],[3,53],[8,57],[18,57],[24,59],[30,63],[28,68],[20,70],[12,64],[6,61],[5,58],[10,55],[18,54],[28,54],[30,46],[26,44],[23,40],[22,37],[19,40],[13,41],[8,44],[3,42],[-1,39],[-6,36],[-10,36]],
+AF:[[-17,15],[-13,27],[-6,33],[3,37],[11,34],[20,32],[30,33],[35,31],[34,28],[37,20],[41,12],[48,11],[51,6],[44,-2],[40,-11],[36,-18],[32,-26],[26,-34],[20,-35],[15,-27],[12,-17],[9,-1],[4,6],[-8,4],[-13,8],[-17,12],[-17,15]],
+AS:[[27,41],[30,46],[30,55],[32,66],[40,68],[55,69],[70,72],[85,75],[105,77],[120,73],[140,72],[158,69],[170,66],[178,62],[162,59],[150,59],[142,50],[140,40],[130,33],[127,35],[122,39],[120,30],[115,22],[108,18],[105,10],[100,6],[97,15],[92,21],[86,20],[80,13],[77,8],[73,18],[66,25],[58,26],[52,28],[48,29],[44,29],[40,36],[36,36],[30,36],[27,41]],
+AU:[[113,-22],[115,-33],[124,-33],[132,-32],[140,-38],[147,-39],[153,-32],[150,-22],[146,-19],[142,-11],[135,-12],[130,-13],[122,-17],[114,-22],[113,-22]],
+GL:[[-45,60],[-32,68],[-22,74],[-32,80],[-48,77],[-58,70],[-50,61],[-45,60]],
+UK:[[-5,50],[-3,53],[-5,56],[-1,57],[1,52],[-2,50],[-5,50]],
+JP:[[130,31],[133,34],[137,35],[141,42],[143,44],[141,40],[134,33],[130,31]]
+};
+const PLACE_NAMES=[[-100,46,"NORTH AMERICA"],[-60,-14,"SOUTH AMERICA"],[22,48,"EUROPE"],[18,6,"AFRICA"],[95,52,"ASIA"],[134,-25,"AUSTRALIA"]];
+/* Story pins (integer lon/lat). Pins 3-6 (Gaza, Hormuz, Kuwait, Derna)
+   sit within a few pixels of each other at this scale, so the main map
+   carries one cluster diamond and the inset shows their true places. */
+const MARKERS=[{n:"1",lon:114,lat:23},{n:"2",lon:4,lat:52},{n:"7",lon:81,lat:16},{n:"8",lon:-67,lat:10}];
+const BUNCH={lon:34,lat:32,tag:"3\u20136"};
+const INSET_MARKS=[{n:"3",lon:34,lat:32},{n:"6",lon:33,lat:33},{n:"5",lon:48,lat:29},{n:"4",lon:57,lat:27}];
+const INSET_LAND=[
+ [[36,29],[40,31],[46,30],[52,28],[57,26],[59,24],[57,20],[54,17],[50,16],[46,14],[43,13],[42,16],[40,20],[39,24],[37,27],[36,29]],
+ [[30,33],[34,33],[35,31],[34,29],[32,27],[30,28],[30,31]]
+];
+const toXY=(lon,lat)=>[(lon+180)/360*560,(60-lat)/120*136];
+const toInset=(lon,lat)=>[(lon-30)/30*150,(36-lat)/12*72];
+const joinPts=(pts,fn)=>pts.map((p)=>{const q=fn(p[0],p[1]);return q[0].toFixed(1)+","+q[1].toFixed(1);}).join(" ");
+let main='<rect width="560" height="136" fill="#dde7e8"/>';
+[-150,-120,-90,-60,-30,0,30,60,90,120,150].forEach((lon)=>{const x=(lon+180)/360*560;main+='<line x1="'+x.toFixed(1)+'" y1="0" x2="'+x.toFixed(1)+'" y2="136" stroke="#b9c9cb" stroke-width="0.5"/>';});
+[-60,-30,0,30,60].forEach((lat)=>{const y=(60-lat)/120*136;main+='<line x1="0" y1="'+y.toFixed(1)+'" x2="560" y2="'+y.toFixed(1)+'" stroke="#b9c9cb" stroke-width="0.5"/>';});
+Object.keys(LANDMASS).forEach((k)=>{main+='<polygon points="'+joinPts(LANDMASS[k],toXY)+'" fill="#7da05c" stroke="#5d8146" stroke-width="0.7"/>';});
+PLACE_NAMES.forEach((L)=>{const q=toXY(L[0],L[1]);main+='<text x="'+q[0].toFixed(1)+'" y="'+q[1].toFixed(1)+'" font-family="Day Sans, sans-serif" font-size="8" letter-spacing="1" fill="#3d4657" text-anchor="middle">'+L[2]+'</text>';});
+MARKERS.forEach((p)=>{const q=toXY(p.lon,p.lat);main+='<circle cx="'+q[0].toFixed(1)+'" cy="'+q[1].toFixed(1)+'" r="6" fill="#b3261e" stroke="#f7f1e3" stroke-width="1"/><text x="'+q[0].toFixed(1)+'" y="'+(q[1]+3).toFixed(1)+'" font-family="Day Sans, sans-serif" font-size="9" font-weight="700" fill="#f7f1e3" text-anchor="middle">'+p.n+'</text>';});
+{const q=toXY(BUNCH.lon,BUNCH.lat);
+main+='<rect x="'+(q[0]-8).toFixed(1)+'" y="'+(q[1]-8).toFixed(1)+'" width="16" height="16" fill="#b3261e" stroke="#f7f1e3" stroke-width="1"/><text x="'+q[0].toFixed(1)+'" y="'+(q[1]+3).toFixed(1)+'" font-family="Day Sans, sans-serif" font-size="8" font-weight="700" fill="#f7f1e3" text-anchor="middle">'+BUNCH.tag+'</text>';}
+document.getElementById('worldmap').innerHTML=main;
+let sub='<rect width="150" height="72" fill="#dde7e8"/>';
+INSET_LAND.forEach((p)=>{sub+='<polygon points="'+joinPts(p,toInset)+'" fill="#7da05c" stroke="#5d8146" stroke-width="0.7"/>';});
+INSET_MARKS.forEach((p)=>{const q=toInset(p.lon,p.lat);sub+='<circle cx="'+q[0].toFixed(1)+'" cy="'+q[1].toFixed(1)+'" r="5" fill="#b3261e" stroke="#f7f1e3" stroke-width="1"/><text x="'+q[0].toFixed(1)+'" y="'+(q[1]+3).toFixed(1)+'" font-family="Day Sans, sans-serif" font-size="8" font-weight="700" fill="#f7f1e3" text-anchor="middle">'+p.n+'</text>';});
+document.getElementById('insetmap').innerHTML=sub;
+/* Overflow audit, same Chromium context, before the screenshot.
+   Only runs once the pinned fonts are ready, so sizes use real glyphs. */
+function collectAudit(){
+  const found={texts:[],bands:[],pins:[]};
+  document.querySelectorAll('[data-audit]').forEach((el)=>{
+    found.texts.push({id:el.getAttribute('data-audit'),text:el.textContent.trim().slice(0,60),
+      sw:el.scrollWidth,cw:el.clientWidth,sh:el.scrollHeight,ch:el.clientHeight,
+      over:(el.scrollWidth>el.clientWidth||el.scrollHeight>el.clientHeight),
+      dw:el.scrollWidth-el.clientWidth,dh:el.scrollHeight-el.clientHeight});
+  });
+  document.querySelectorAll('.row').forEach((el)=>{
+    found.bands.push({band:el.getAttribute('data-band')||el.className,
+      sw:el.scrollWidth,cw:el.clientWidth,sh:el.scrollHeight,ch:el.clientHeight,
+      over:(el.scrollWidth>el.clientWidth||el.scrollHeight>el.clientHeight)});
+  });
+  MARKERS.forEach((p)=>{const q=toXY(p.lon,p.lat);found.pins.push({n:p.n,lon:p.lon,lat:p.lat,x:+q[0].toFixed(1),y:+q[1].toFixed(1),inFrame:(q[0]>=0&&q[0]<=560&&q[1]>=0&&q[1]<=136)});});
+  const cq=toXY(BUNCH.lon,BUNCH.lat);found.pins.push({n:"3-6 bunch",lon:BUNCH.lon,lat:BUNCH.lat,x:+cq[0].toFixed(1),y:+cq[1].toFixed(1),inFrame:(cq[0]>=0&&cq[0]<=560&&cq[1]>=0&&cq[1]<=136)});
+  INSET_MARKS.forEach((p)=>{const q=toInset(p.lon,p.lat);found.pins.push({n:"inset "+p.n,lon:p.lon,lat:p.lat,x:+q[0].toFixed(1),y:+q[1].toFixed(1),inFrame:(q[0]>=0&&q[0]<=150&&q[1]>=0&&q[1]<=72)});});
+  const pg=document.querySelector('.sheet');
+  found.page={sw:pg.scrollWidth,cw:pg.clientWidth,sh:pg.scrollHeight,ch:pg.clientHeight};
+  found.fontsReady=document.fonts?document.fonts.status:"unknown";
+  return found;
+}
+function publishAudit(){document.getElementById('audit').textContent=JSON.stringify(collectAudit());}
+if(document.fonts&&document.fonts.ready){document.fonts.ready.then(publishAudit);}else{publishAudit();}
+</script>
+</body>
+</html>
